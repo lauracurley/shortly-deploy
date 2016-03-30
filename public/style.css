@@ -136,3 +136,7 @@ form input[type=text], form input[type=password] {
 .creator .message {
   clear: both;
 }
+
+body {
+  background: #08a9f9;
+}
