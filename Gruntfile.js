@@ -58,6 +58,9 @@ module.exports = function(grunt) {
         tasks: ['cssmin']
       }
     },
+    server: {
+      port: grunt.option('port') || 4568
+    },
 
     shell: {
       prodServer: {
@@ -113,6 +116,7 @@ module.exports = function(grunt) {
       grunt.task.run(['build']);
     } else {
       grunt.task.run([ 'server-dev' ]);
+      grunt.task.run(['build']);
     }
   });
 

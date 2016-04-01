@@ -11,7 +11,7 @@ var Link = require('../app/models/link');
 // NOTE: these tests are designed for mongo!
 /////////////////////////////////////////////////////
 
-xdescribe('', function() {
+describe('', function() {
 
   beforeEach(function(done) {
     // Log out currently signed in user
@@ -21,6 +21,7 @@ xdescribe('', function() {
 
         // Delete objects from db so they can be created later for the test
         Link.remove({url: 'http://www.roflzoo.com/'}).exec();
+        // console.log(Link.remove, exec);
         User.remove({username: 'Savannah'}).exec();
         User.remove({username: 'Phillip'}).exec();
 
